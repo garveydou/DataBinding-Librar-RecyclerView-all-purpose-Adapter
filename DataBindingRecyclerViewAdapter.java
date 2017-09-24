@@ -46,9 +46,9 @@ public class DataBindingRecyclerViewAdapter extends RecyclerView.Adapter<DataBin
             case TYPE_FOOTER:
                 return new DataBindingViewHolder(footerView,viewType);
             case TYPE_NORMAL:
-                return new DataBindingViewHolder(View.inflate(mContext,mLayoutId,null),viewType);
+                return new DataBindingViewHolder(LayoutInflater.from(mContext).inflate(mLayoutId,parent,false),viewType);
             default:
-                return new DataBindingViewHolder(View.inflate(mContext,mLayoutId,null),viewType);
+                return new DataBindingViewHolder(LayoutInflater.from(mContext).inflate(mLayoutId,parent,false),viewType);
         }
 
     }
